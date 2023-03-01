@@ -31,6 +31,7 @@ And('User continue to checkout following Scenario#1', () => {
     cy.contains('Selesaikan berbagai tugas berikut, dapatkan sertifikat, dan buat dirimu diakui industri')
 })
 
+//SKENARIO1
 Given('User navigates to the VIX detail page', () => {
     cy.visit('https://web-staging.rakamin.com/virtual-internship-experience/a').wait(5000)
 })
