@@ -3,10 +3,12 @@ import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps"
 //SCENARIO 2
 Given('User navigates to the VIX detail page', () => {
     cy.visit('https://web-staging.rakamin.com/').wait(3000)
-    cy.get('.sc-kfNCuK').click({force:true})
-    cy.get('.sc-bsgCTs > [data-cy="vix-dropdown-menu"]').click({force:true})
-    cy.get('.kfRvwY > [data-cy="explore-vix-navigation"]').click({force:true})
-    cy.get('[data-cy="vix-card-2"] > .vacancy-card-link > .sc-GKYbw > .fGaJoL > .qtUrv').click({force:true})
+    cy.get('.sc-iBqIpo').click({force:true}).wait(1000)
+    cy.get('.sc-izeztm > [data-cy="vix-dropdown-menu"]').click({force:true}).wait(1000)
+    cy.contains('Explore VIX Program').click({force:true}).wait(1000)
+    //cy.get('.kfRvwY > [data-cy="explore-vix-navigation"]').click({force:true}).wait(1000)
+    //cy.get('[data-cy="vix-card-2"] > .vacancy-card-link > .sc-GKYbw > .fGaJoL > .qtUrv').click({force:true})
+    cy.get('[data-cy="vix-card-1"] > .vacancy-card-link > .sc-GKYbw > .fGaJoL > .qtUrv').click({force:true})
 })
 
 When('User click “Daftar Sekarang”', () => {
